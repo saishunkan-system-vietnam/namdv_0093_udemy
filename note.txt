@@ -16,12 +16,14 @@ queryGraphQL json: {
 8- Demo về CRUD sử dụng GraphQL. So sánh với Rest API
 9- Demo về sử dụng socket
 
-
+---------------------------------------------------------------------------
 2.event-loop là cơ chế xử lý sự kiện các thao tác không đồng bộ mà không làm chương trình bị chặn
 Quá trình chạy:
 + sự kiện đồng bộ được chạy đầu tiên và không ảnh hưởng bới event-loop
 + các sự kiện bất đồng bộ sẽ được đưa vào 1 queue sau đó khi được thực thi lấy trong queue này ra để thực thi lần lượt
 + event loop sẽ kiểm tra queue này xem thứ tự các hàm rồi thực thi lần lượt, mỗi lần sẽ thực thi 1 callback, cái nào đến timer sẽ thực hiện
+
+---------------------------------------------------------------------------
 
 note nội dung khoá học:
 section 1:
@@ -36,5 +38,133 @@ section 3:
 - module import export 
 
 section 4:
-- npm ?
-- 
+- npm quản lý các package và project node
+- chuơng trình có thể bị block với lỗi, bắt và ném ra lỗi để biết và để tiếp tục chương trình
+- các package có 3 loại là save save-dev và global
+
+section 5:
+- giới thiệu expressjs
+- middleware trong expressjs qua use và next() để chuyển từ các middleware
+- routing bằng phương thức và đường dẫn
+- file tĩnh 
+
+section 6:
+- template engine: hiển thị data theo logic ngay trong file engine
+
+section 7:
+- mô hình code: mvc
+- model: data và logic xử lý data
+- view: hiển thị dùng template engine
+- controller: kết nối controller và view qua logic
+
+section 8: 
+- tối ưu nội dung code theo mvc của section 7
+
+section 9:
+- routing động
+- truyền param qua : và query qua ? trên route
+
+section 10: 
+- data: compare sql và nosql
+- connect và fetch data bằng sql
+
+section 11:
+- sequelize: ORM sql: chặt chẽ dạng bảng
+- orm giúp connect, fetching, model, query thay vì dùng trực tiếp truy vấn sql bình thường
+- thực hành CRUD với mysql
+
+section 12:
+- mongodb: nosql: dạng văn bản obj
+- crud
+
+section 13:
+- mongoose: ODM mongodb
+- thay thế mongodb bằng cách kết nối, cú pháp thực thi sql
+
+section 14:
+- cookie và session
+- cookie: lưu giữ data, không bị che dấu, lưu ở client, có hạn hoặc hết khi đóng browser
+- session: lưu data ẩn ở server, có thể lưu trữ ở nhiều nơi như cache, database, hoặc local code
+
+section 15:
+- bảo mật, xác thực và các cách tấn công
+- bảo mật: mã hoá mật khẩu, mã hoá thông tin đăng nhập
+- xác thực: định danh người dùng qua thông tin gửi lên và thông tin đang check, sử dụng session trước khi có các xử lý controller
+- tấn công CSRF: fake request và sử dụng xác thực cookie của ứng dụng đang dùng để giả mạo
+
+section 16:
+- send mail sử dụng sendgrid
+
+section 17:
+- bảo mật mật khẩu và phân quyền
+- đổi mật khẩu các được xác nhận lại mật khẩu hiện thời
+- token xác thực cần có thời hạn để tránh tính duy nhất mãi
+- phân quyền để xác nhận tài khoản đăng nhập có những quyền nào, truy cập những thông tin nào
+
+section 18:
+- validate dữ liệu: tránh dữ liệu rác, ngay xử lý từ sớm thay vì phải đến bước controller rồi mới check
+- check dữ liệu truyền lên, trả lại message lỗi tuỳ thuộc trường dữ liệu không hợp lệ
+
+section 19:
+- cơ chế bắt lỗi qua các try catch, then catch , if check
+- các status code cho từng response trả về 
+2: success, 3: redirect, 4: client error, 5: server error
+- vẫn có thể crash server do những lỗi bên ngoài 
+
+section 20: 
+- thao tác với file
+
+section 21:
+- paging
+
+section 22:
+- gửi và nhận request giữa client và server
+- json data trả về 
+
+section 23:
+- payment OCD, stripe
+
+section 24:
+- rest api: gửi dữ liệu từ server về client mà không phải giao diện
+- dữ liệu dạng json được sử dụng giữa client và server
+- setting content-type để đọc json và lỗi cors ngăn truy cập data từ bên ngoài
+
+section 25: 
+- thực hành rest api
+
+section 26:
+- cơ chế async await thay cho promise then catch
+
+section 27:
+- socket cơ chế realtime tcp giữa client và server
+
+section 28:
+- graphql là cơ chế hoạt động khác cùng với restapi: chọn dữ liệu phù hợp lấy ra không lấy dữ liệu thừa
+- 3 loại: query, mutation và subscription
+- crud với GraphQL
+
+section 29:
+- deploy app: biến môi trường, api keys, setting ,logs, ssl server
+
+section 30:
+- testing: manually, auto
+
+section 31:
+- build tool: convert code chạy đọc hiểu dễ dàng thành code tối ưu cách viết, hiệu năng nhưng khó hiểu
+
+section 32:
+- cú pháp và cách dùng module từng phiên bản es5 và về sau trong nodejs
+
+section 33:
+- ts = thêm kiểu cho js để quản lý code viết code chặt chẽ, giúp code càng nhiều sẽ tránh nhiều lỗi phát sinh và dễ tìm lỗi
+- các cú pháp của ts như interface, generic
+- khi chạy vẫn phải compile sang js 
+
+section 34:
+- deno == node là 1 runtime compiler hỗ trợ ts và js, import export, promise, 
+
+section 35:
+- thực hành deno và mongodb
+
+section 36:
+- hướng đi tiếp theo
