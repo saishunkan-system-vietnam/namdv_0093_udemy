@@ -229,3 +229,31 @@
   message: 'HTTP GET /user/checkLogin',
   timestamp: '2024-01-29T08:16:40.809Z'
 }
+{
+  meta: {
+    req: {
+      url: '/user/login',
+      headers: {
+        'content-type': 'application/json',
+        'user-agent': 'PostmanRuntime/7.36.1',
+        accept: '*/*',
+        'postman-token': '498539a1-fc7f-4e79-817a-3240547142cb',
+        host: 'localhost:1234',
+        'accept-encoding': 'gzip, deflate, br',
+        connection: 'keep-alive',
+        'content-length': '54',
+        cookie: 'udemy_express=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibWFpbCI6Im5hbWR2IiwiaWF0IjoxNzA2NjY1NTExfQ.fTWuwVa1aR6j9upy4U6WYxo9QQce1pdQW6JAg4rVTbc'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/user/login',
+      query: {},
+      body: { mail: 'namdv', password: 'Ssv@123456' }
+    },
+    res: { statusCode: 200, body: 'Đăng nhập thành công' },
+    responseTime: 204
+  },
+  level: 'info',
+  message: 'HTTP POST /user/login',
+  timestamp: '2024-01-31T06:11:37.781Z'
+}
