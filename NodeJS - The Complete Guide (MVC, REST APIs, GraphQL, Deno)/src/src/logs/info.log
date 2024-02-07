@@ -1,0 +1,54 @@
+{
+  meta: {
+    req: {
+      url: '/user/login',
+      headers: {
+        'content-type': 'application/json',
+        'user-agent': 'PostmanRuntime/7.36.1',
+        accept: '*/*',
+        'postman-token': '63256602-c7c7-4546-9cf4-b2565dafac97',
+        host: 'localhost:3006',
+        'accept-encoding': 'gzip, deflate, br',
+        connection: 'keep-alive',
+        'content-length': '54'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/user/login',
+      query: {},
+      body: { mail: 'namdv', password: 'Ssv@123456' }
+    },
+    res: { statusCode: 500, body: 'Server lỗi' },
+    responseTime: 98
+  },
+  level: 'info',
+  message: 'HTTP POST /user/login',
+  timestamp: '2024-02-07T02:37:59.563Z'
+}
+{
+  meta: {
+    req: {
+      url: '/user/login',
+      headers: {
+        'content-type': 'application/json',
+        'user-agent': 'PostmanRuntime/7.36.1',
+        accept: '*/*',
+        'postman-token': 'df2d1998-99cf-4c24-98e9-c45a0d0093db',
+        host: 'localhost:1234',
+        'accept-encoding': 'gzip, deflate, br',
+        connection: 'keep-alive',
+        'content-length': '54'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/user/login',
+      query: {},
+      body: { mail: 'namdv', password: 'Ssv@123456' }
+    },
+    res: { statusCode: 200, body: 'Đăng nhập thành công' },
+    responseTime: 224
+  },
+  level: 'info',
+  message: 'HTTP POST /user/login',
+  timestamp: '2024-02-07T02:43:25.494Z'
+}

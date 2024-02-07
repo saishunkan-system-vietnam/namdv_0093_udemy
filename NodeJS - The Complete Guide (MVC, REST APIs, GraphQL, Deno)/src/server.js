@@ -5,7 +5,9 @@ const cookieParser = require('cookie-parser');
 // catch error finally
 require('express-async-errors');
 const app = express();
-require('dotenv').config();
+require('dotenv').config(
+  { path: require('path').resolve(__dirname, `../.env`) }
+);
 const routes = require('./routes/index.route');
 const { optionsLog } = require('./utils/log.util');
 const socket = require('./socket/connect.socket');
@@ -18,7 +20,7 @@ expressWinston.responseWhitelist.push('body');
 app.use(express.json());
 app.use(cookieParser());
 routes(app);
-
+console.log(process.env.APP_PORT);
 const port = process.env.APP_PORT || 3006;
 const server = require('http').createServer(app);
 socket(server);
